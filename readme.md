@@ -13,9 +13,7 @@ Option Strategy Builder is a Python library designed to help traders and investo
 
 To install Option Strategy Builder, ensure you have Python installed on your system, then run the following command:
 
-shCopy code
-
-`pip install option-strategy-builder` 
+`git pull https://github.com/manan-desai/option-stretegy-builder.git`
 
 ## Usage
 
