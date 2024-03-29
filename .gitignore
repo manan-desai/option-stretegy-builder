@@ -1,0 +1,7 @@
+fno*/
+api-scrip-master.csv
+__pycache__/
+.env*
+*.csv
+.DS_Store
+dump.txt
