@@ -45,7 +45,7 @@ print(f"Strategy PnL: {pnl:.2f}")
 plot_strategy_pnl_with_labels(options, current_price, interest_rate, price_range=(21700, 22600), step=100)` 
 ```
 
-# Bear put spread Strategy with plot
+# Bear put spread Strategy return on expiry with plot
 ```
 from option_stretegy_builder import calculate_strategy_pnl,plot_strategy_pnl_with_labels
 
@@ -65,6 +65,32 @@ plot_strategy_pnl_with_labels(options, current_price, 7.087, price_range,step=10
 ```
 
 ![BearPutSpread](https://github.com/manan-desai/option-stretegy-builder/blob/main/img/BearPutSpread.png)
+
+
+# Short Iron Condor Strategy return on expiry with plot
+```
+from option_stretegy_builder import calculate_strategy_pnl,plot_strategy_pnl_with_labels
+
+options = [
+        # (strike_price,premium, qty, IV,time to expity in day, call or put, buy or sell),
+          (21950,26.5, 50*1, 11.72, 0.01, "call", "buy"),
+          (22100, 52, 50*1, 11.19, 0.01, "call", "sell"),
+             (22750,17, 50*1, 11.72, 0.01, "put", "buy"),
+          (22600, 44.55, 50*1, 11.19, 0.01, "put", "sell"),
+          ]
+current_price = 22250
+expected_price = current_price  # you can change expected_price as per your analysis 
+interest_rate = 7.087 
+
+
+price_range = (21000, 24000)  
+
+plot_strategy_pnl_with_labels(options, current_price, 7.087, price_range,step=300)
+
+```
+
+![ShortIronCondor ](https://github.com/manan-desai/option-stretegy-builder/blob/main/img/ShortIronCondor.png)
+
 
 ## Contributing
 
