@@ -13,9 +13,7 @@ Option Strategy Builder is a Python library designed to help traders and investo
 
 To install Option Strategy Builder, ensure you have Python installed on your system, then run the following command:
 
-shCopy code
-
-`pip install option-strategy-builder` 
+`git pull https://github.com/manan-desai/option-stretegy-builder.git`
 
 ## Usage
 
@@ -45,6 +43,25 @@ print(f"Strategy PnL: {pnl:.2f}")
 # Plot the strategy PnL
 ```
 plot_strategy_pnl_with_labels(options, current_price, interest_rate, price_range=(21700, 22600), step=100)` 
+```
+
+# Bear put spread Strategy with plot
+```
+from option_stretegy_builder import calculate_strategy_pnl,plot_strategy_pnl_with_labels
+
+options = [
+        # (strike_price,premium, qty, IV,time to expity in day, call or put, buy or sell),
+          (22650,40, 50*1, 11.72, 0.1, "call", "sell"),
+          (22750, 12, 50*1, 11.19, 0.1, "call", "buy"),
+        # you can add more options in basket
+          ]
+current_price = 22147  # Current price of the Nifty 50 index
+expected_price = current_price   # Expected price of the Nifty 50 index at expiration
+interest_rate = 7.087  # Risk-free interest rate (in percent)
+price_range = (21700, 22800)  
+
+plot_strategy_pnl_with_labels(options, current_price, 7.087, price_range,step=100)
+
 ```
 
 ## Contributing
