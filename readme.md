@@ -64,6 +64,8 @@ plot_strategy_pnl_with_labels(options, current_price, 7.087, price_range,step=10
 
 ```
 
+![BearPutSpread](https://github.com/manan-desai/option-stretegy-builder/blob/main/img/BearPutSpread.png)
+
 ## Contributing
 
 We welcome contributions from the community! If you're interested in improving Option Strategy Builder, please follow these steps:
